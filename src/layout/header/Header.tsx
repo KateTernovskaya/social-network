@@ -1,25 +1,34 @@
 import React from 'react';
-
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
+import {Container} from "../../components/wrapper/Container";
+import {theme} from "../../styles/Theme";
 
 export const Header = () => {
     return (
         <StyledHeader>
-            <Logo/>
+            <Container>
+                <Logo color={'white'}/>
+                <span> RaccoonGram</span>
+            </Container>
         </StyledHeader>
     );
 };
 
 const StyledHeader = styled.header`
-  grid-area: h;
-  background-color: #f8b3b3;
+  background-color: ${theme.colors.accent};
 
-  img {
-    max-width: 200px;
-    height: 60px;
-    object-fit: cover;
-    background-color: transparent;
+  ${Container} {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  span {
+    font-family: 'Poor Story', system-ui;
+    font-size: 60px;
+    color: white;
   }
 `
 
