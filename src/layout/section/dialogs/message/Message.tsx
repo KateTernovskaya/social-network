@@ -3,12 +3,13 @@ import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
 
 type MessagePropsType = {
+    id: string
     message: string
 }
 
-export const Message: React.FC<MessagePropsType> = ({message}) => {
+export const Message: React.FC<MessagePropsType> = ({id, message}) => {
     return (
-        <StyledMessage> {message} </StyledMessage>
+        <StyledMessage id={id}> {message} </StyledMessage>
     );
 };
 

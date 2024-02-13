@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {MyPosts} from "./myPosts/MyPosts";
 import {UserInfo} from "./userInfo/UserInfo";
-import Bg from '../../../assets/images/raccoon-back.jpg'
+import Bg from "../../../assets/images/raccoon-back.jpg"
 
 
 export const Profile = () => {

@@ -1,30 +1,36 @@
 import React from 'react';
-import {Container} from "../../components/wrapper/Container";
-import {SideBar} from "../sideBar/SideBar";
+import {Container} from "../../components/wrapper/container";
+import {SideBar} from "../SideBar/SideBar";
 import styled from "styled-components";
-import {BrowserRouter, Route} from "react-router-dom";
 import {Dialogs} from "../section/dialogs/Dialogs";
 import {Profile} from "../section/profile/Profile";
 import {News} from "../section/news/News";
 import {Music} from "../section/music/Music";
 import {Settings} from "../section/settings/Settings";
+import {Route} from "react-router-dom";
+
+//Components
+const profileComponents = ()=> <Profile/>
+const dialogsComponents = ()=> <Dialogs/>
+const newsComponents = ()=> <News/>
+const musicComponents = ()=> <Music/>
+const settingsComponents = ()=> <Settings/>
+
 
 export const Main = () => {
     return (
-        <BrowserRouter>
             <StyledMain>
                 <Container>
                     <SideBar/>
                     <MainWrapperContent>
-                        <Route path={'/profile'} component={Profile}/>
-                        <Route path={'/dialogs'} component={Dialogs}/>
-                        <Route path={'/news'} component={News}/>
-                        <Route path={'/music'} component={Music}/>
-                        <Route path={'/settings'} component={Settings}/>
+                        <Route path={'/profile'} component={profileComponents}/>
+                        <Route path={'/dialogs'} component={dialogsComponents}/>
+                        <Route path={'/news'} component={newsComponents}/>
+                        <Route path={'/music'} component={musicComponents}/>
+                        <Route path={'/settings'} component={settingsComponents}/>
                     </MainWrapperContent>
                 </Container>
             </StyledMain>
-        </BrowserRouter>
     );
 };
 

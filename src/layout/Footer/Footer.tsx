@@ -1,28 +1,28 @@
 import React from 'react';
+import {Container} from "../../components/wrapper/container";
+import {Logo} from "../../components/logo/logo";
 import styled from "styled-components";
-import {Logo} from "../../components/logo/Logo";
-import {Container} from "../../components/wrapper/Container";
 import {theme} from "../../styles/Theme";
 
-export const Header = () => {
+export const Footer = () => {
     return (
-        <StyledHeader>
+        <StyledFooter>
             <Container>
                 <Logo color={'white'}/>
                 <span> RaccoonGram</span>
             </Container>
-        </StyledHeader>
+        </StyledFooter>
     );
 };
 
-const StyledHeader = styled.header`
+const StyledFooter = styled.header`
   background-color: ${theme.colors.accent};
+  margin-top: 50px;
 
   ${Container} {
     display: flex;
     align-items: center;
     gap: 20px;
-    justify-content: center;
   }
 
   span {
@@ -31,4 +31,3 @@ const StyledHeader = styled.header`
     color: white;
   }
 `
-
